@@ -1,0 +1,63 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "type": "object",
+  "properties": {
+    "businessUnit": {
+      "type": "string",
+      "description": "Business Unit: unit smaller than an Operating Company, but bigger than a Team"
+    },
+    "product": {
+      "type": "string",
+      "description": "Product: the name of the software product this component is part of"
+    },
+    "name": {
+      "type": "string",
+      "description": "Component Name: the common display name this component is known by (only if different to repository)"
+    },
+    "type": {
+      "type": "string",
+      "enum": [
+        "Application",
+        "Monorepo",
+        "Service",
+        "Library",
+        "Infrastructure",
+        "Template",
+        "Report",
+        "MachineLearningModel",
+        "Documentation",
+        "Other",
+        "UIElement"
+      ],
+      "description": "Component Type"
+    },
+    "serviceTier": {
+      "oneOf": [
+        { "type": "string", "enum": ["1", "2", "3", "4"] },
+        { "type": "number", "enum": [1, 2, 3, 4] }
+      ],
+      "description": "1: Critical; 2: Important; 3: Minor; 4: Insignificant"
+    },
+    "lifecycleStage": {
+      "type": "string",
+      "enum": ["Pre-release", "Active", "Deprecated", "Experiment"],
+      "description": "Lifecycle stage: One of 'Pre-release', 'Active', 'Deprecated'\nWhere:\n* 'Deprecated' is equivalent to 'End of life', 'Retired', 'Obsolete', 'Sunset'\n* 'Experiment' is equivalent to 'Proof of concept', 'Prototype', 'Test', 'Demo', 'Sandbox'"
+    },
+    "cloudPlatform": {
+      "type": "string",
+      "description": "Platform where this is being deployed (e.g. AWS, GitHub, Azure)"
+    },
+    "jira": {
+      "type": "string",
+      "description": "Link to your JIRA project or board"
+    },
+    "wiki": {
+      "type": "string",
+      "description": "Link to Confluence or other external documentation source"
+    },
+    "msTeams": {
+      "type": "string",
+      "description": "Link to your MS Team channel, if you have one"
+    }
+  }
+}
