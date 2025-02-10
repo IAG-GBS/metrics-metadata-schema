@@ -29,7 +29,7 @@
         "Other",
         "UIElement"
       ],
-      "description": "Component Type"
+      "description": "The MAIN type of Software Component present in this repo, for example:\n* 'Infrastructure' may include 'Terraform' resources, 'AWS CDK' definitions, etc.\n* 'Application' may include 'WebApp', 'MobileApp', 'Desktop App', etc.\n* An 'Application' or 'Service' may also include 'Infrastructure', but the main type of component will still be 'Application' or 'Service'"
     },
     "serviceTier": {
       "oneOf": [
