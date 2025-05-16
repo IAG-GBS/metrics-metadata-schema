@@ -1,2 +1,2 @@
 # metrics-metadata-schema
-Shared schema definitions for repository metadata
+Shared schema definitions for repository metadata.

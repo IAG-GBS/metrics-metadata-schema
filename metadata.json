@@ -1,0 +1,7 @@
+{
+  "$schema": "./metadata.schema.json",
+  "type": "Documentation",
+  "lifecycleStage": "Active",
+  "serviceTier": 3,
+  "cloudPlatform": "GitHub"
+}
